@@ -10,7 +10,7 @@ const CarList = () => {
         <View style={styles.container}>
             <FlatList
                 data={cars}
-                renderItem={({ item }) => <CarItem name={item.name} Image={item.image} tagLine={item.tagline} />}
+                renderItem={({ item }) => <CarItem name={item.name} Image={item.image} tagLine={item.tagline} taglineCTA={item.taglineCTA} />}
                 showsVerticalScrollIndicator={false}
                 snapToAlignment={'start'}
                 decelerationRate={'fast'}

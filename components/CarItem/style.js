@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     },
     tagLineCTA: {
         textDecorationLine: 'underline',
-        color: '#171a20'
+        color: '#323331',
     },
     BackgroundImage: {
         width: '100%',
