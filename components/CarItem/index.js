@@ -1,23 +1,24 @@
 import React from "react";
 import { ImageBackground, Text, View } from 'react-native';
-import StyledButton from "../StyledButton";
-import styles from "./Style";
+import styles from './style';
+import StyledButton from '../StyledButton/index';
 
-const CarItem = () => {
+const CarItem = ({ name, tagLine, tagLineCTA, Image }) => {
     return (
         <View style={styles.carContainer}>
-            <ImageBackground source={require('../../assets/images/ModelS.jpeg')} style={styles.BackgroundImage} />
+            <ImageBackground source={Image} style={styles.BackgroundImage} />
 
             <View style={styles.titles}>
-                <Text style={styles.title}>Model S</Text>
-                <Text style={styles.subTitle}>Starting at $69,420</Text>
+                <Text style={styles.title}>{name}</Text>
+                <Text style={styles.subTitle}>
+                    {tagLine}
+                    <Text style={styles.tagLineCTA}>
+                        {tagLineCTA}
+                    </Text>
+                </Text>
             </View>
 
-            <View style={{
-                position: 'absolute',
-                bottom: 50,
-                width: '100%'
-            }}>
+            <View style={styles.buttonsContainer}>
                 <StyledButton
                     type="primary"
                     content="Custom Order"
